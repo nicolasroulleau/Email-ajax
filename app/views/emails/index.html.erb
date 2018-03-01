@@ -4,11 +4,6 @@
 
 	 <section id = "mytable" class = "row">
 	 	<div class = "col-lg-5 col-sm-4 myobjects">
-	 		<div class="container">
-      			<% flash.each do |key, value| %>
-        			<div class="alert alert-<%= key %>"><%= value %></div>
-      			<% end %>
-    		</div>
 	 		<h2 class = "row title">Object :</h2>
 	 		<div class = "allobj">  
 	 		    <% @emails.each do |email| %>  
@@ -38,7 +33,7 @@
 			    	<div class = "body inbox-<%=email.id%>">
 			    		<h3 class = "emailobj">Obj : <%=email.object%></h3>
 			    		<p><%=email.body%></p> <br>
-			        		<%= link_to 'Delete', email, method: :delete, data: { confirm: 'Confirmez-vous la suppression de cet email ?'}, :class => 'delete_email', :remote => true%>
+			        		<%= link_to 'Delete', email, method: :delete, :class => 'delete_email', :remote => true%>
 			    	</div>
 			  	</div>
 			<% end %>

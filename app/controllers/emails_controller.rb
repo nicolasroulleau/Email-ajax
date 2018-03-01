@@ -13,13 +13,6 @@ class EmailsController < ApplicationController
   def destroy  	  
     @email = Email.find(params[:id])
 
-    if @email.destroy
-      flash[:success] = "Task Completed."
-      
-    else
-      flash[:error] = "Task couldn't be deleted. Try again."
-    end
-
   end
 
   private
