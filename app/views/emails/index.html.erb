@@ -38,7 +38,7 @@
 			    	<div class = "body inbox-<%=email.id%>">
 			    		<h3 class = "emailobj">Obj : <%=email.object%></h3>
 			    		<p><%=email.body%></p> <br>
-			        		<%= link_to 'Delete', email, method: :delete, :class => 'delete_email', :remote => true%>
+			        		<%= link_to 'Delete', email, method: :delete, data: { confirm: 'Confirmez-vous la suppression de cet email ?'}, :class => 'delete_email', :remote => true%>
 			    	</div>
 			  	</div>
 			<% end %>

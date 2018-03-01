@@ -1,24 +1,8 @@
-# README
+# EMAIL with Ajax 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Bienvenue sur mon app Email, utilisant l'ajax pour l'affichage des messages.
 
-Things you may want to cover:
+L'app est déployée sur Heroku à l'adresse suivante: https://gentle-bayou-15008.herokuapp.com/
 
-* Ruby version
+Have fun !!
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
