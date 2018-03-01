@@ -1,0 +1,18 @@
+
+var email = $('.inbox-' + <%=@email.id%>); // l'email à faire apparaitre
+var object = $('.thisobject-' + <%= @email.id %>);// l'objet en question
+var objectCase = $('#objectcase-' + <%= @email.id %>);// la case de l'objet en question
+var read = $('.read-' + <%= @email.id %>);// champ de texte pour ajouter mention 'lu'
+
+
+objectCase.on("click", function () { // lors du clic sur la case objet
+ 
+  $('.body').hide(); // je cache tous les autres emails qui pourraient être ouverts
+  email.fadeIn(); // je fas apparaitre le body de l'email associé
+  
+  object.css("font-weight", "normal"); // je passe l'objet de gras à normal
+  objectCase.css("background-color", "#9ff8c9"); // je passe le background à vert
+  read.html('&nbsp;- Lu').css("color", "gray").css("font-size", "16px").css("font-weight", "bold"); // J'insère -Lu  la place de non-lu
+
+}).click();
+
