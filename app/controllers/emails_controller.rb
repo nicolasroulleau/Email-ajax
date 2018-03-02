@@ -12,12 +12,10 @@ class EmailsController < ApplicationController
 
   def destroy  	  
     @email = Email.find(params[:id])
-
-    if @email.destroy
-      flash[:success] = "Task Completed."
-      
-    else
-      flash[:error] = "Task couldn't be deleted. Try again."
+    @email.destroy
+    respond_to do |format|
+      format.html { redirect_to emails_url, notice: 'Email was successfully destroyed.' }
+      format.json { head :no_content }
     end
 
   end
